@@ -498,27 +498,25 @@
       showSlide(currentSlide); // Show initial slide
     });
   </script>
-       <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const cards = document.querySelectorAll('.card input[type="radio"]');
-      let currentCard = 0;
+  <script>
+                 document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.card');
+            let currentCard = 0;
 
-      function showCard(cardIndex) {
-        cards.forEach(card => card.checked = false); // Uncheck all cards
-        if (cards[cardIndex]) {
-          cards[cardIndex].checked = true; // Check the selected card if it exists
-        }
-      }
+            function showCard(cardIndex) {
+                cards.forEach(card => card.classList.remove('checked'));
+                cards[cardIndex].classList.add('checked');
+            }
 
-      function autoSwitch() {
-        setInterval(() => {
-          currentCard = (currentCard + 1) % cards.length;
-          showCard(currentCard);
-        }, 12000); // Change the interval time (in milliseconds) as needed (e.g., 3000 for 3 seconds)
-      }
+            function autoSwitch() {
+                setInterval(() => {
+                    currentCard = (currentCard + 1) % cards.length;
+                    showCard(currentCard);
+                }, 3000); // Change the interval time (in milliseconds) as needed (e.g., 3000 for 3 seconds)
+            }
 
-      autoSwitch();
-    });
+            autoSwitch();
+        });
 </script>
 </body>
 </html>
