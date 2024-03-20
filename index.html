@@ -393,25 +393,25 @@
       showSlide(currentSlide); // Show initial slide
     });
   </script>
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const cards = document.querySelectorAll('.card');
-            let currentCard = 0;
+       <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const cards = document.querySelectorAll('.card input[type="radio"]');
+        let currentCard = 0;
 
-            function showCard(cardIndex) {
-                cards.forEach(card => card.classList.remove('checked'));
-                cards[cardIndex].classList.add('checked');
-            }
+        function showCard(cardIndex) {
+            cards.forEach(card => card.checked = false);
+            cards[cardIndex].checked = true;
+        }
 
-            function autoSwitch() {
-                setInterval(() => {
-                    currentCard = (currentCard + 1) % cards.length;
-                    showCard(currentCard);
-                }, 3000); // Change the interval time (in milliseconds) as needed (e.g., 3000 for 3 seconds)
-            }
+        function autoSwitch() {
+            setInterval(() => {
+                currentCard = (currentCard + 1) % cards.length;
+                showCard(currentCard);
+            }, 3000); // Change the interval time (in milliseconds) as needed (e.g., 3000 for 3 seconds)
+        }
 
-            autoSwitch();
-        });
-    </script>
+        autoSwitch();
+    });
+</script>
 </body>
 </html>
