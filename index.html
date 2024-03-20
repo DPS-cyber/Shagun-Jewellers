@@ -212,10 +212,51 @@
 
   <div id="home">
     <center><h1>Explore our collection, Most Luxury Jwellery Store in Mysuru</h1></center>
-    <center><img src="https://via.placeholder.com/300x200" alt="Ring Product 1">
-    <img src="https://via.placeholder.com/300x200" alt="Ring Product 1">
-    <img src="https://via.placeholder.com/300x200" alt="Ring Product 1">
-    <img src="https://via.placeholder.com/300x200" alt="Ring Product 1"></center>
+    <center>
+        <div class="wrapper">
+        <div class="container">
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="card">
+                <div class="row">
+                    <div class="icon">1</div>
+                    <div class="description">
+                        <h4>Winter</h4>
+                        <p>Winter has so much to offer - creative activities</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c2">
+            <label for="c2" class="card">
+                <div class="row">
+                    <div class="icon">2</div>
+                    <div class="description">
+                        <h4>Digital Technology</h4>
+                        <p>Gets better every day - stay tuned</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c3">
+            <label for="c3" class="card">
+                <div class="row">
+                    <div class="icon">3</div>
+                    <div class="description">
+                        <h4>Globalization</h4>
+                        <p>Help people all over the world</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c4">
+            <label for="c4" class="card">
+                <div class="row">
+                    <div class="icon">4</div>
+                    <div class="description">
+                        <h4>New technologies</h4>
+                        <p>Space engineering becomes more and more advanced</p>
+                    </div>
+                </div>
+            </label>
+        </div>
+    </div></center>
     <div class="review-slider">
         <center><div class="review-slide">
         <h3>John Doe</h3>
@@ -352,5 +393,25 @@
       showSlide(currentSlide); // Show initial slide
     });
   </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.card');
+            let currentCard = 0;
+
+            function showCard(cardIndex) {
+                cards.forEach(card => card.classList.remove('checked'));
+                cards[cardIndex].classList.add('checked');
+            }
+
+            function autoSwitch() {
+                setInterval(() => {
+                    currentCard = (currentCard + 1) % cards.length;
+                    showCard(currentCard);
+                }, 3000); // Change the interval time (in milliseconds) as needed (e.g., 3000 for 3 seconds)
+            }
+
+            autoSwitch();
+        });
+    </script>
 </body>
 </html>
