@@ -194,6 +194,106 @@
     background-color: #f8f8f8;
     color: #333;
   }
+          .wrapper {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            height: 400px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: start;
+        }
+
+        .card {
+            width: 80px;
+            height: 80px; /* Set the height according to your image aspect ratio */
+            border-radius: .75rem;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 2rem;
+            margin: 0 10px;
+            display: flex;
+            align-items: flex-end;
+            transition: .6s cubic-bezier(.28,-0.03,0,.99);
+            box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .card > .row {
+            color: white;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .card > .row > .icon {
+            background: #223;
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px;
+        }
+
+        .card > .row > .description {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            height: 80px;
+            width: 520px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition-delay: .3s;
+            transition: all .3s ease;
+        }
+
+        .description p {
+            color: #b0b0ba;
+            padding-top: 5px;
+        }
+
+        .description h4 {
+            text-transform: uppercase;
+        }
+
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .card.checked {
+            width: 600px;
+        }
+
+        .card.checked .description {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        .card[for="c1"] {
+            background-image: url('img1.jpg'); /* Replace 'img1.jpg' with your image file path */
+        }
+
+        .card[for="c2"] {
+            background-image: url('img2.jpg'); /* Replace 'img2.jpg' with your image file path */
+        }
+
+        .card[for="c3"] {
+            background-image: url('img3.jpg'); /* Replace 'img3.jpg' with your image file path */
+        }
+
+        .card[for="c4"] {
+            background-image: url('img4.jpg'); /* Replace 'img4.jpg' with your image file path */
+        }
 </style>
 </head>
 <body>
