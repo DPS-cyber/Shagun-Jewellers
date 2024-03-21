@@ -31,7 +31,7 @@ For inquiries regarding licensing, permissions, custom orders, or general questi
 
 ## License
 
-This project is licensed under the https://dps-cyber.github.io/JJ/(LICENSE.md). Please review the license file for detailed terms and conditions.
+This project is licensed under the https://dps-cyber.github.io/JJ/blob/main/LICENSE.md. Please review the license file for detailed terms and conditions.
 
 ---
 
